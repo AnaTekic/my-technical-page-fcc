@@ -1,195 +1,184 @@
-<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-
-<!DOCTYPE HTML>
-<html lang="eng">
-   <head>
-      <title>Ana's Technical Documentation Project</title>
-      <meta charset="utf-8"> 
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-         integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
-      <meta name="description" content="techincal documentation FCC project">
-      <meta name="author" content="Ana T">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&display=swap" rel="stylesheet"> 
-     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
-      <link rel="stylesheet" type="text/css" href="style.css">
-      
-   </head>
-   <div id="sidebar">
-  <nav id="navbar">
-    
-    <header class="nav-link" id="active">HTML Tutorial</header>
-      <ul>
-    
-      <li><a class="nav-link" href="#introduction">HTML Introduction</a></li>  <li><a class="nav-link" href="#editors">HTML Editors</a></li>
-        <li><a class="nav-link" href="#elements">HTML Elements</a></li> 
-          <li><a class="nav-link" href="#attributes">HTML Attributes</a></li>
-             <li><a class="nav-link" href="#styles">HTML Styles</a></li>
-      </ul>
-      </nav>
-  </div>
-   <main id="main-doc">
-     <section class="main-section" id="tutorial">
-       <header> HTML Tutorial</header>
-
-
-HTML is the standard markup language for Web pages.
-With HTML you can create your own Website.
-HTML is easy to learn - You will enjoy it!
-</p>
-       <p> This HTML tutorial contains some HTML examples.
-
-With W3School's online HTML editor, you can edit the HTML, and click on a button to view the result.</p>
-       <h4>Example HTML structure looks like this:</h4>
-     <div class="code-field">
-     <code>
- &lt;!DOCTYPE html&gt;<br/>&lt;html&gt;<br/>&lt;head&gt;<br/>&lt;title&gt;Page Title&lt;/title&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/><br/>&lt;h1&gt;This is a Heading&lt;/h1&gt;<br/>&lt;p&gt;This is a paragraph.&lt;/p&gt;<br/><br/>&lt;/body&gt;<br/>&lt;/html&gt; 
-     </code>
-     </section>
-      <section class="main-section" id="introduction">
-        <header>HTML Introduction</header>
-       <p>HTML is the standard markup language for creating Web pages.</p>
-       <ul>
-         
-         <li>HTML stands for Hyper Text Markup Language</li>
-         
-         <li>HTML consists of a series of elements</li>
-         <li>HTML elements are represented by tags</li>
-         <li>Browsers do not display the HTML tags, but use them to render the content of the page</li>
-         
-         
-        </ul>
+* {
+   box-sizing: border-box;}
+ html {
+   font-family: 'Roboto', sans-serif;
+   font-size: 14px;
+   color: white;
+   background: #5e42a6;
+ }
+ #sidebar {
+   position: fixed;
+   width: 21%;
+   height: 100vh;
+   background: #312450;
+   font-size: 0.65em;
+   font-family: 'Inria Sans', sans-serif;
+   overflow:auto;
+   padding:0;
+ }
+ 
+ nav {
+   position: relative;
+   margin: 0 15%;
+   text-align: right;
+   top: 50%;
+   transform: translateY(-50%);
+   font-weight: bold;
+   
+ }
+ 
+ nav ul {
+   list-style: none;
+ }
+ nav ul li {
+     position: relative;
+     margin: 3.2em 0;
+   color: white;
+ }
+ .nav-link {
+  
+       line-height: 5em;
+       text-transform: uppercase;
+       text-decoration: none;
+       letter-spacing: 0.4em;
+       color: rgba(255,255,255, 0.35);
+       display: block;
+       transition: all ease-out 300ms;
+     }
      
-     </section>
-      <section class="main-section" id="editors">
-           <header>HTML Editors</header>
-       <p>Web pages can be created and modified by using professional HTML editors.
-
-However, for learning HTML we recommend a simple text editor like Notepad (PC) or TextEdit (Mac).
-
-We believe using a simple text editor is a good way to learn HTML.
-
-Follow the steps below to create your first web page with Notepad or TextEdit.</p>
-       <h5> W3Schools Online Editor</h5>
-<p>
-Try the W3School's free online editor, you can edit the HTML code and view the result in your browser.
-
-It is the perfect tool when you want to test code fast. It also has color coding and the ability to save and share code with others:</p>
-        <a  id="link" href="https://www.w3schools.com/tryit/">W3School Online Editor</a>
-     </section>
-      <section class="main-section" id="elements">
-           <header>HTML Elements</header>
-        <h5>HTML Elements</h5>
-       <p>An HTML element usually consists of a start tag and an end tag, with the content inserted in between:</p>
-       <div class="code-field">
-     <code>
-         &lt;tagname&gt;Content goes here...&lt;/tagname&gt;  
-     </code></div>
-          <h5>Nested Elements</h5>
-          <p>HTML elements can be nested (elements can contain elements).
-
-All HTML documents consist of nested HTML elements.
-
-This example contains four HTML elements:
-            <div class="code-field">
-            <code> &lt;!DOCTYPE html&gt;<br/>&lt;html&gt;<br/>&lt;body&gt;<br/><br/>&lt;h1&gt;My First Heading&lt;/h1&gt;<br/>&lt;p&gt;My first paragraph.&lt;/p&gt;<br/><br/>&lt;/body&gt;<br/>&lt;/html&gt; 
-            </code>
-          <p>
-            The &lt;body&gt; element defines the document body.<br/><br/>It has a start tag &lt;body&gt; and an end tag &lt;/body&gt;.<br/><br/>Inside the &lt;body&gt; element is two other HTML elements: &lt;h1&gt; and &lt;p&gt;.
-        </p></div>
-     </section>
-      <section class="main-section" id="attributes">
-           <header>HTML Attributes</header>
-       <p>
-    All HTML elements can have attributes
-    Attributes provide additional information about an element
-    Attributes are always specified in the start tag
-         Attributes usually come in name/value pairs like: <code>name="value"</code>
-</p>
-        <h5>The href atribute</h5>
+ #active  {
+       color: white;
+   font-size:1.4em;
+ 
+ 
+ }
+  
+  nav ul li::after {
+       opacity: 0.2;
+     }
+     
+   
+ .nav-link:hover {
+    color: rgba(255,255,255, 0.75);
        
-        <p> HTML links are defined with the <code>&lt;a&gt; </code>tag. The link address is specified in the href attribute:</P>
-        <div class="code-field">
-     <code>
-       &lt;a href=&quot;https://www.w3schools.com&quot;&gt;This is a link&lt;/a&gt; 
-     </code></div>
-     <h5>The width and height Attributes</h5>
-     <p>HTML images also have width and height attributes, which specifies the width and height of the image:</p>
-          <div class="code-field">
-     <code>  &lt;img src=&quot;img_girl.jpg&quot; width=&quot;500&quot; height=&quot;600&quot;&gt;  </code></div>
-     <h5> We suggest: Use lowercase atributes</h5>
-     <p>The HTML5 standard does not require lowercase attribute names.
-
-The title attribute can be written with uppercase or lowercase like title or TITLE.
-
-       W3C recommends lowercase in HTML, and demands lowercase for stricter document types like XHTML.</p>
-     <h5>We suggest: Quote Attribute Values</h5>
-       <p>The HTML5 standard does not require quotes around attribute values.
-
-The href attribute can be written without quotes. 
-         W3C recommends quotes in HTML, and demands quotes for stricter document types like XHTML.
-
-Sometimes it is necessary to use quotes. This example will not display the title attribute correctly, because it contains a space.</p>
-       <h4>Chapter Summary</h4>
-       <ul>
-         
-         <li>All HTML elements can have attributes</li>
-    <li>The title attribute provides additional "tool-tip" information</li>
-    <li>The href attribute provides address information for links</li>
-    <li>The width and height attributes provide size information for images</li>
-    <li>The alt attribute provides text for screen readers</li>
-    <li>At W3Schools we always use lowercase attribute names</li>
-   <li> At W3Schools we always quote attribute values</li>
-       </ul>
-     </section>
-      <section class="main-section" id="styles">
-           <header>HTML Styles</header>
-        <h5>Styling HTML with CSS</h5>
-        
-       <p>CSS stands for Cascading Style Sheets.
-
-CSS describes how HTML elements are to be displayed on screen, paper, or in other media.
-
-CSS saves a lot of work. It can control the layout of multiple web pages all at once.
-
-CSS can be added to HTML elements in 3 ways:
-        </p>
-        <ul>
-          
-          <li>Inline - by using the style attribute in HTML elements</li>
-    <li>Internal - by using a style element in the head section</li>
-    <li>External - by using an external CSS file</li>
-        </ul>
-       <p> The most common way to add CSS, is to keep the styles in separate CSS files. However, here we will use inline and internal styling, because this is easier to demonstrate, and easier for you to try it yourself. </p>
-        <h5>Inline CSS Example:</h5>
-        <p>An inline CSS is used to apply a unique style to a single HTML element.
-
-An inline CSS uses the style attribute of an HTML element.
-
-          This example sets the text color of the h1 element to blue:</p>
-        <div class="code-field">
-        <code> &lt;h1 style=&quot;color:blue;&quot;&gt;This is a Blue Heading&lt;/h1&gt; </code></div>
-        <h5>Internal CSS Example:</h5>
-        <p>An internal CSS is used to define a style for a single HTML page.
-
-          An internal CSS is defined in the head section of an HTML page, within a style element: </p>
-        <div class="code-field">
-     <code>
-        &lt;!DOCTYPE html&gt;<br/>&lt;html&gt;<br/>&lt;head&gt;<br/>&lt;style&gt;<br/>body {background-color: powderblue;}<br/>h1   {color: blue;}<br/>p    {color: red;}<br/>&lt;/style&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/><br/>&lt;h1&gt;This is a heading&lt;/h1&gt;<br/>&lt;p&gt;This is a paragraph.&lt;/p&gt;<br/><br/>&lt;/body&gt;<br/>&lt;/html&gt; 
-     </code>
-          </div>
-        <h5>External CSS Example</h6>
-        <p>An external style sheet is used to define the style for many HTML pages.
-
-With an external style sheet, you can change the look of an entire web site, by changing one file!
-
-          To use an external style sheet, add a link to it in the head section of the HTML page:</p>
-          <div class="code-field">
-        <code>
-           &lt;!DOCTYPE html&gt;<br/>&lt;html&gt;<br/>&lt;head&gt;<br/>  &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/><br/>&lt;h1&gt;This is a heading&lt;/h1&gt;<br/>&lt;p&gt;This is a paragraph.&lt;/p&gt;<br/><br/>&lt;/body&gt;<br/>&lt;/html&gt; 
-        </code>
-          </div>
-     </section>
-  </main>
-</html>
+ }
+ nav ul li::after {
+       content: '';
+       position: absolute;
+       width: 100%;
+       height: 0.2em;
+       background: black;
+       left: 0;
+       bottom: 0;
+       background-image: linear-gradient(to right, #5e42a6, #b74e91)
+     }
+   
+ 
+ 
+ #main-doc {
+   position: relative;
+   width:79%;
+   float: right;
+   padding: 2% 8% 8% 8%;
+ }
+ .main-section {
+   margin-bottom: 10%;
+ }
+ 
+ header {
+   font-size: 2em;
+   font-weight: 800;
+   margin-bottom: 5%;
+   
+ }
+ .code-field {
+   border: 1px solid white;
+   padding: 4%;
+   margin: 5% 2% 5% 2%;
+   background-color: rgb(190, 156, 175);
+   color: black;
+ }
+ .main-section li {
+   padding: 1%;
+   position: relative;
+   list-style: none;
+ }
+ .main-section li::before {
+   content: '▶';
+   position: absolute;
+   left: -3%;
+ }
+ .main-section h5{
+   font-size: 1.14em;
+ }
+ .main-section h4 {
+   margin-top: 5%;
+   
+ }
+ #link {
+   color: white;
+ }
+ #link:hover {
+   text-shadow: 2px 2px 2px rgba(202,206,203,0.77);
+ }
+ @media screen and (max-width: 700px) {
+   #sidebar {
+     display:block;
+     width: 100%;
+     position: relative;
+     margin:0 auto;
+     padding-bottom: 1px;
+     height: auto;
+     overflow:hidden;
+ 
+   }
+   .nav-link {
+     line-height: 3em;
+   }
+   #active {
      
+     text-align: center;
+     line-height: 2em;
+   }  
+   #sidebar nav {
+     transform: translateY(1%);
+     
+   
+   }
+   #sidebar ul {
+     display:block;
+     width:100%;
+     position: relative;
+     height:auto;
+     margin: 0 auto;
+     padding:0;
+     
+   }
+   #sidebar nav a {
+     
+     text-align: center;
+     
+   }
+   #sidebar nav li {
+      display:block;
+     width:100%;
+     position: relative;
+     height:auto;
+     margin: 0 auto;
+     padding:0;
+     
+   }
+   
+   #main-doc {
+     display: block;
+     width:100%;
+     margin-left: 0;
+     padding-top: 20px;
+   }
+  .main-section li::before {
+   content: '▶';
+   position: absolute;
+   left: -10%;
+ }
+ 
+ 
