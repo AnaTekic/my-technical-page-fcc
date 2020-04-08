@@ -8,12 +8,13 @@ html {
 }
 #sidebar {
   position: fixed;
-  width: 25%;
+  width: 21%;
   height: 100vh;
   background: #312450;
   font-size: 0.65em;
   font-family: 'Inria Sans', sans-serif;
   overflow:auto;
+  padding:0;
 }
 
 nav {
@@ -76,12 +77,12 @@ nav ul li::after {
 
 #main-doc {
   position: relative;
-  width:75%;
+  width:79%;
   float: right;
-  padding: 2% 8% 8% 8%;
+  padding: 2% 8% 2% 8%;
 }
 .main-section {
-  margin-bottom: 10%;
+  margin-bottom: 8%;
 }
 
 header {
@@ -96,6 +97,7 @@ header {
   margin: 5% 2% 5% 2%;
   background-color: rgb(190, 156, 175);
   color: black;
+  word-wrap: break-word;
 }
 .main-section li {
   padding: 1%;
@@ -111,8 +113,7 @@ header {
   font-size: 1.14em;
 }
 .main-section h4 {
-  margin-top: 5.1%;
-  
+  margin-top: 5%;
   
 }
 #link {
@@ -121,3 +122,78 @@ header {
 #link:hover {
   text-shadow: 2px 2px 2px rgba(202,206,203,0.77);
 }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+font-size: 0.75em;
+  padding-top: 30px;
+  
+}
+footer a {
+  color: white;
+}
+@media screen and (max-width: 700px) {
+  #sidebar {
+    display:block;
+    width: 100%;
+    position: relative;
+    margin:0 auto;
+    padding-bottom: 1px;
+    height: auto;
+    overflow:hidden;
+
+  }
+  .nav-link {
+    line-height: 3em;
+  }
+  #active {
+    
+    text-align: center;
+    line-height: 2em;
+  }  
+  #sidebar nav {
+    transform: translateY(1%);
+    
+  
+  }
+  #sidebar ul {
+    display:block;
+    width:100%;
+    position: relative;
+    height:auto;
+    margin: 0 auto;
+    padding:0;
+    
+  }
+  #sidebar nav a {
+    
+    text-align: center;
+    
+  }
+  #sidebar nav li {
+     display:block;
+    width:100%;
+    position: relative;
+    height:auto;
+    margin: 0 auto;
+    padding:0;
+    
+  }
+  
+  #main-doc {
+    display: block;
+    width:100%;
+    margin-left: 0;
+    padding-top: 20px;
+  }
+ .main-section li::before {
+  content: '▶';
+  position: absolute;
+  left: -10%;
+}
+  footer {
+    display: block;
+  }
+  }
+
